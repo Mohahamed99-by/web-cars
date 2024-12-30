@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/cars/',
   server: {
     host: true, // Listen on all local IPs
     port: 8080, // Changed port to 8080

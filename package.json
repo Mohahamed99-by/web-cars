@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sabirdev.github.io/cars/",
   "name": "cars",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +11,7 @@
     "preview": "vite preview",
     "start": "vite preview --host --port $PORT",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     

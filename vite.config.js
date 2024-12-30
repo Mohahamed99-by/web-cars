@@ -6,14 +6,16 @@ export default defineConfig({
   plugins: [react()],
   base: '/cars/',
   server: {
-    host: true, // Listen on all local IPs
-    port: 8080, // Changed port to 8080
-    open: true, // Open browser on start
-    strictPort: false, // Allow fallback to another port if 8080 is in use
+    port: process.env.PORT || 3000,
+    host: '0.0.0.0'
   },
   preview: {
-    port: 8080, // Changed port to 8080
-    strictPort: false, // Allow fallback to another port if 8080 is in use
-    host: true,
+    port: process.env.PORT || 3000,
+    host: '0.0.0.0'
+  },
+  build: {
+    outDir: 'build',
+    assetsDir: 'assets',
+    emptyOutDir: true
   }
 })

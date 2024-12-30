@@ -34,10 +34,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/cars', label: 'Our Fleet' },
-    { path: '/about', label: 'About Us' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/cars-site', label: 'Home' },
+    { path: '/cars-site/cars', label: 'Our Fleet' },
+    { path: '/cars-site/about', label: 'About Us' },
+    { path: '/cars-site/contact', label: 'Contact' }
   ];
 
   return (

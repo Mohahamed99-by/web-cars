@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa';
+import TouristAreas from '../components/TouristAreas/TouristAreas';
 import { useState, useEffect } from 'react';
-
 const Home = () => {
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -124,7 +125,7 @@ const Home = () => {
       url: 'https://tiktok.com',
       color: 'rounded-3xl bg-[#000000] bg-[#333333]'
     }
-];
+  ];
 
   if (loading) {
     return (
@@ -208,8 +209,11 @@ const Home = () => {
       </div>
     );
   }
+
   return (
+   <>
     <div className="min-h-screen bg-gray-900">
+     
       {/* Social Media Sidebar */}
       <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-50">
         <div className="flex flex-col gap-2">
@@ -340,6 +344,9 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Tourist Areas Section */}
+      <TouristAreas />
+
       {/* Benefits Section */}
       <div className="py-16 sm:py-20 bg-gray-800/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -415,6 +422,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 
